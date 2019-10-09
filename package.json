@@ -1,0 +1,30 @@
+{
+  "name": "dragonometry",
+  "version": "1.0.0",
+  "description": "A game built in JavaScript to help teach new programmers practice with functions, loops, arrays and objects. ",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "server": "./node_modules/nodemon/bin/nodemon.js server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/walkerspence/Dragonometry.git"
+  },
+  "author": "Walker Spence and Izzy Young",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/walkerspence/Dragonometry/issues"
+  },
+  "homepage": "https://github.com/walkerspence/Dragonometry#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "esprima": "^4.0.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mocha": "^6.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  }
+}

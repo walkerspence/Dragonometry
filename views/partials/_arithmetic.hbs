@@ -1,0 +1,17 @@
+<div class="col-6 offset-3">
+	<form action="/game", method="post"> 
+
+		<div class="input-group">
+			<input class="form-control" type="hidden" name="inputs" value="{{ inputs }}"/>
+			<input class="form-control" type="hidden" name="func_name" value="{{ func_name }}"/>
+			<input class="form-control" type="number" step="0.01" name="solution" required="true">
+			<div class="input-group-append">
+				<button class="btn btn-secondary" type="submit">Submit</button>
+			</div>		
+		</div>	 
+	</form>
+
+	<div class="health-bar progress">
+		<div class="progress-bar progress-bar-striped progress-bar-animated remaining-health" style="width: {{current_health}}%">{{ current_health }} hp</div> 
+	</div>
+</div>	

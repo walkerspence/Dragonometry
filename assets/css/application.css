@@ -1,0 +1,45 @@
+.health-bar {
+	margin-top: 2em;
+	height: 4em !important;
+	background-color: #34eb4340 !important;
+	border: 1px solid #34eb43;
+}
+
+.remaining-health {
+	font-size: 16px;
+	background-color: #34eb43 !important;
+}
+
+.speech-bubble {
+	position: relative;
+	background: #dadada;
+	border-radius: .4em;
+	min-height: 150px;
+	padding: 25px;
+}
+
+.speech-bubble:after {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 55px solid transparent;
+	border-right-color: #dadada;
+	border-left: 0;
+	border-top: 0;
+	margin-top: -27.5px;
+	margin-left: -55px;
+}
+
+.container-fluid {
+	min-height: 100vh;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
