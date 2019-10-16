@@ -39,50 +39,22 @@ function full_name(first, last) {
 // how to make an array: https://www.w3schools.com/js/js_arrays.asp
 // test by running `npm test tests/list-of-five.spec`
 
-var list_of_five = [5, 6, 2, 4, 5]
-
 // define a function called "get_number" which takes in one array of length 5 and a number corresponding to position in the array, and returns the
 // value in the array stored at the corresponding position 
 // test by running `npm test tests/get-number.spec`
 
-function get_number(arr, n) {
-	return arr[n];
-}
-
 // define a function called "add_five" which takes in one array of length 5 and returns the sum of all numbers in the array
 // test by running `npm test tests/add-five.spec`
-
-function add_five(arr) {
-	var sum = 0;
-	var counter = 0; 
-
-	while (counter < 5) {
-		sum += arr[counter] 
-		counter++;
-	}
-
-	return sum;
-}
 
 // define an array and call it "my_favorite_things" and store at least five strings inside of it. 
 // these will be the things you recieve as rewards for beating the game! 
 // array information again for convenience: https://www.w3schools.com/js/js_arrays.asp
 // test by running `npm test tests/favorite-array.spec`
 
-var my_favorite_things = ["Solange Knowles", "DaBaby", "Big Thief", "Frank Ocean", "Pinegrove"]; 
-
 // define a function called "favorite_things_logger" which prints all items in your list using console.log
 // how to make a while loop: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while
-// test by running `npm test tests/favorite-array.spec`
+// test by running `npm test tests/favorite-function.spec`
 
-function favorite_things_logger(favorite_array) {
-	var counter = 0;
-
-	while (counter < favorite_array.length) {
-		console.log(favorite_array[counter])
-		counter++;
-	}
-}
 
 // YOUR CODE ABOVE THIS LINE
 
