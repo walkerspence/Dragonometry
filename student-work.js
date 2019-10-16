@@ -18,6 +18,8 @@
 // define a function called "full_name", with inputs "first" and "last", which returns a single string containing the player's full name
 // test by running `npm test tests/full-name.spec`
 
+// after you're done with all of this, go to the "loop.js" file and finish the final challenge!
+
 // YOUR CODE ABOVE THIS LINE
 
 // STARTER CODE! DO NOT CHANGE
