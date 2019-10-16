@@ -7,7 +7,7 @@ const hbs = require('express-handlebars');
 const path = require('path')
 
 var functions = require("./student-work.js")
-var function_names = Object.keys(functions).slice(0, 5);
+var function_names = ["add", "subtract", "multiply", "divide", "add_five"];
 
 app.set('view engine', 'hbs');
 app.set('views', __dirname +  "/views");
@@ -74,6 +74,7 @@ app.post('/game', (req, res) => {
     }
 
 	var func_name = req.body.func_name;
+	inputs = (func_name == "add_five") ? [inputs] : inputs
 	var func = functions[func_name]
 	var player_solution = parseFloat(req.body.solution).toFixed(2);
 	var brain_solution = (typeof func.apply(this, inputs) == "string") ? func.apply(this, inputs) : parseFloat(func.apply(this, inputs)).toFixed(2);
@@ -92,15 +93,15 @@ app.get('/win', (req, res) => {
 	current_health = 100;
 
 	res.render('game', {layout: "application.hbs",
-						dragon_dialogue: "ROOOOAR You Won! Congratulations. Are you ready to play again?", 
-						whichPartial: () => { return "_accept" }});
+						dragon_dialogue: "ROOOOAR You won! Congratulations. You've earned five rewards!", 
+						whichPartial: () => { return "_favorites" }});
 });
 
-app.get('/win', (req, res) => {
-	current_health = 100;
+app.get('/rewards', (req, res) => {
+	var favorites = req.query.favorite[0];
 
 	res.render('game', {layout: "application.hbs",
-						dragon_dialogue: "ROOOOAR You Won! Congratulations. Are you ready to play again?", 
+						dragon_dialogue: `ROOOOAR You won some ${favorites[0]}, ${favorites[1]}, ${favorites[2]}, ${favorites[3]}, and ${favorites[4]}. Would you like to play again?`,  
 						whichPartial: () => { return "_accept" }});
 });
 
@@ -144,6 +145,7 @@ function rand_int(lower, upper) {
 
 function get_inputs(operation) {
 	inputs = [];
+	n = 2;
 
 	n = (operation == "add_five") ? 5 : 2 
 
